@@ -37,9 +37,19 @@ print(f'Here i have changed a range of items {a}\n')
 
 
 # If we want to remove an element from the list 
+
+#pop()
 b = [1,'apple','samsung',5]
 b.pop(1) # pop  removes the element that is present on the index passed in the function and if we don't pass any index it will pop the last element of the list
-print(b,' this is the list after the element being removed')
+print(b,' this is the list after the element being removed using pop()\n')
+
+b2 = ['A','B','c','A']
+b2.remove('A')
+print(f'remove(\'A\') removes the first occurence of the element A {b2}')
+
+# del - this also removes the specified index
+# del b2[0] -  this will remove the element present at index 0
+# del b2 - if we don't specify the index it will delete the whole list
 
 # If we want to append element to the list
 c = [1,2,3,4,5]
@@ -65,3 +75,14 @@ print("Concatenated list",A)
 fruits = ['apple']
 fruits.insert(1,'banana')
 print(fruits)
+
+
+# sorting - will sort the list alphanumerically, ascending, by default:
+num = [1,3,4,6,10,-1]   
+num.sort() # this will sort in ascending order
+print(f'This is the sorted list in ascending order: {num}')
+num.sort(reverse=True)
+print(f'This is sorted in descending order: {num}')
+#reverse - reverse the order of a list
+num.reverse()
+print(f'This is the reversed list {num}')
