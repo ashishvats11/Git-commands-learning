@@ -3,7 +3,10 @@ print("Hello World")
 print('''Hello world1, I am a deadly virus currently under deverlopment but once I am ready i will make you all cry.
       I will be worse than the AI Apocalypse!! hahahaha!''')     #this is paragraph writing in python, in this i can write in multiple lines
 
+########################################################################
+
 #variables - used to store values
+
 name = "Ashish"
 age = 23
 salary = 9999.99
@@ -19,3 +22,31 @@ print(f"v1 value is {v1} and v2 value is {v2} after swap")
 # Multiple variable assignment
 a,b,c = 1,2,4
 print(f"These are the variables values for a,b and c {a}, {b}, {c} respectively")
+
+##################################
+
+#Conditional Statements if, elif, else
+
+a,b = 10,8
+
+if a<b:
+    print("a is less than b")
+elif a==b:
+    print("a is equal to b")
+else:
+    print("a is greater than b")
+
+#take input from the user in the console
+name = input("Enter your name: ")
+print(f"Hello {name}")
+
+g = 10
+h = 5
+if g<h:
+    print("g is less than h")
+else:
+    if g==h:
+        print('g is equal to h')
+    else:
+        print("g is greater than h")
+    
