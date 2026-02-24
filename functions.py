@@ -18,4 +18,11 @@ print(student('Ashish',23,'2nd')) # in here we had to print the function because
 def teacher (name:str, subject:str,salary:int) -> str:
     return f'Hey {name}, you teach {subject} and your current salary is {salary}'
 
-print(teacher("Ashish","Computer Science",120000))
+print(teacher("Ashish","Computer Science",120000)) # type hints are not enforced at run time
+
+# how can we enforce it then? 
+def fun(name:str,age:int):
+    if not isinstance(age,int):
+        raise TypeError("age must be an integer")
+    return f'Your name is {name} and age is {age}'
+print(fun("Ashish",23))
