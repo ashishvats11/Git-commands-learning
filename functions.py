@@ -2,6 +2,8 @@
 
 #define function - def is the keyword to define function
 
+# syntax def function_name():
+
 def function():
     print("Hello, welcome to your first function")
 
