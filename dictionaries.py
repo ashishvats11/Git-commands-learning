@@ -2,6 +2,8 @@
 # Dictionary stores data in key:value pair. it is ordered(from python 3.7+ onwards), changable and it does not allow duplicates.
 # dictionary {k1:v1}
 
+
+
 dict1 = {'brand':'Ford','Year':'1997','Model':'Ford Shelby' } # this is a dictionary with key value pairs
 
 print(dict1) # this will print the dictionary
@@ -11,4 +13,26 @@ dict2 = {'brand':'ParleG', 'year':'2002','product':'Namkeen','year':'2010'} # in
 print(dict2['year']) # on running this you will get the last updated value of the year that is 2010
 
 #length of dictionary
-print(f'Length of dict2 which has duplicate key (year) {len(dict2)}')
+print(f'Length of dict2 which has duplicate key (year) {len(dict2)}') #it gave the length as 3 instead of 4 because it only takes on key into account not both'
+
+
+# the dict() constructor, used to create the dictionaries
+
+# 1 Creating an empty dictionary dict()
+empty_dict = dict()
+print("This is an empty dictionary",empty_dict)
+
+# 2 From an iterable of key-value pairs: Pass an iterable 
+# (like a list or a tuple) containing two-item tuples, where the first item in each tuple is the key and the second is the value.
+
+pairs = [('name','Bob'),('age',23)] # you can  only pass two values as key value pairs in each () or []
+person_dict = dict(pairs)
+print(f'Dictionary created from iterabble {person_dict}')
+
+test =[[1,2],[4,5]]
+test1 = dict(test)
+print(test1)
+
+#3 third way of creating dictionary
+p1 = dict(name = 'Ashish',age = 23,salary = 10200201200, country ='India')
+print(p1)
