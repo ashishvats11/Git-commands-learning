@@ -86,3 +86,38 @@ print(f'This is sorted in descending order: {num}')
 #reverse - reverse the order of a list
 num.reverse()
 print(f'This is the reversed list {num}')
+
+
+# customise sort Function - key keyword is used in this case
+# It accepts a function that is called once for each item in the list to produce a "proxy" value,
+# and the sorting is then based on these proxy values.
+
+# You can also customize your own function by using the keyword argument key = function.
+# The function will return a number that will be used to sort the list (the lowest number first):
+
+def myfunc(n):
+  return abs(n - 50)
+
+thislist = [100, 50, 65, 82, 23]
+thislist.sort(key = myfunc)
+print(thislist) #output - [50, 65, 23, 82, 100], it sorted the thislist elements based on the results we got from the function
+
+# case insensitive sorting - by default sorting  method is case sensitive order capital letter first in ascending order
+
+exotic_fruits = ['apple','strawberry','Dragonfruit','Kiwi']
+exotic_fruits.sort()
+print(f'Sorted list {exotic_fruits}') 
+exotic_fruits.sort(key=str.lower)
+print(f"sorted list after lowering the string {exotic_fruits}") # this will lower the string in comparison, the lowered string will not reflect in the list
+
+
+
+# Copy list - copy(), list() and slice (:)
+
+c1 = ["ashish",1107,'Hello',69.99,'Happy']
+c2 = c1.copy()
+c3 = list(c1)
+c4 = c1[1:3]
+print(f'1st copy using copy() {c2}')
+print(f'2nd copy list {c3}')
+print(f'3rd copy using slice  {c4}')
