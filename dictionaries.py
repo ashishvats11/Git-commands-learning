@@ -2,6 +2,8 @@
 # Dictionary stores data in key:value pair. it is ordered(from python 3.7+ onwards), changable and it does not allow duplicates.
 # dictionary {k1:v1}
 
+# For easy understanding - dictionary are similar to list in list we have index for each value in the list, same here for each value there is a unique key,
+
 
 
 dict1 = {'brand':'Ford','Year':'1997','Model':'Ford Shelby' } # this is a dictionary with key value pairs
@@ -53,8 +55,13 @@ print(f'Using the .keys() we get all the keys in the dictionary: {cars.keys()}')
 print(f'Using the .values() we get all the values in the dictionary: {cars.values()}')
 
 # Update the value of a key
+#1 by passing the key name
 cars['model'] = 'Q8'
 print(f'Dictionary after updating one of the key\'s value {cars}')
+
+#2 by using the update() function - using this function we can update the existing key and even add new key - value pair to the dictionary
+cars.update({'year':2025,'closing_year':2300})
+print(f'here i have updated the year using the update() function {cars}')
 
 # Adding new item to the dictionary
 cars['colour'] = 'Black'
@@ -65,6 +72,33 @@ print(f'These are the items in the dictionary {cars.items()}')
 
 # Check if key exists in the dictionary
 if 'year' in cars:  # this will only work for the keys not the values
-    print('This key is present')
+    print('This key is present \n')
 else:
-    print("Sorry, this key is not present")
+    print("Sorry, this key is not present \n" )
+
+
+# Removing the items -- pop(), popitem(), del, clear()
+
+dummy = dict([("name",'Ashish'),("last_name","Vats"),("age",23),("ecode",'q0006919')])
+print(f'Dummy dictionary before removing the item {dummy} \n')
+
+# 1st pop() - in this pass the key of the item that we want to remove
+dummy.pop('last_name') # in the pop() function we need to pass the key to remove that item
+print(f"Dummy dictionary after using the pop() function {dummy}") # we removed the last_name item
+
+# 2nd popitem( )
+dummy.popitem() # this function removes the last item of the dictionary and this function doesn't take any argument
+print(f'Dummy dictionary after using the popitem() function {dummy}')
+
+# 3rd del keyword - this will delete the item whose key has been passed and it can also delte the whole dictionary
+car2 = {'brand':'Audi','year':2025,"price":70000,"color":'black'}
+print(car2)
+del car2['price']
+print(f'The car2 dictionary after deletig the price key item {car2}')
+
+# del car2  -- This will delete the car2 dictionary
+# print(car2) --  this will throw car2 not defined error as car2 has been deleted
+
+# clear() -  this will clear all the item inside a dictionary
+car2.clear()
+print(f'car2 dictionary after using the clear() function {car2}')
