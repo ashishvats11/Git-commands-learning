@@ -114,3 +114,4 @@ a3 = dict(a1)
 print(f'Copy of the a1 dictionary using the dict() function --> {a3}')
 a1['year'] = 2106
 print(f'All the dictionaries after updarting the main dctionary {a1}, {a2}, {a3}')  # you will see only the a1 got changed not the copied ones
+
