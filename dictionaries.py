@@ -55,6 +55,7 @@ print(f'Using the .keys() we get all the keys in the dictionary: {cars.keys()}')
 print(f'Using the .values() we get all the values in the dictionary: {cars.values()}')
 
 # Update the value of a key
+
 #1 by passing the key name
 cars['model'] = 'Q8'
 print(f'Dictionary after updating one of the key\'s value {cars}')
@@ -102,3 +103,14 @@ print(f'The car2 dictionary after deletig the price key item {car2}')
 # clear() -  this will clear all the item inside a dictionary
 car2.clear()
 print(f'car2 dictionary after using the clear() function {car2}')
+
+
+# Creating the copy of dictionary
+a1 = dict(brand = 'Audi', year = 2002, black = 'Red')
+print(a1)
+a2 = a1.copy()
+print(f'Copy of the a1 dictionary using the copy() function --> {a2}')
+a3 = dict(a1)
+print(f'Copy of the a1 dictionary using the dict() function --> {a3}')
+a1['year'] = 2106
+print(f'All the dictionaries after updarting the main dctionary {a1}, {a2}, {a3}')  # you will see only the a1 got changed not the copied ones
