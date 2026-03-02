@@ -36,3 +36,13 @@ for i in set1:
 print()
 
 
+# Looping a tuple
+tup1 = ('apple','banana',True,1,3,"ashish")
+print("these are the tuple items: ", end='')
+for i in tup1:
+    print(i, end = ' ')
+print()
+
+for i in range(len(tup1)):
+    print(tup1[i], end=' ')
+print()
