@@ -129,3 +129,7 @@ b1 = {"apple", "banana", "cherry"}
 b2 = {"google", "microsoft", "apple"}
 
 print(f'Symmetric differene of two sets {b1.symmetric_difference(b2)}')
+
+# Frozen sets - sets which can not be changed (no addition nor removal) - It is an immutable version of set
+x = frozenset(('apple','banana','frozen'))
+print(f'Frozen set {x}')
