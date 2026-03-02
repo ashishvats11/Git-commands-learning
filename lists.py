@@ -18,7 +18,7 @@ print(f'list of dulicates: {lst4}\n')
 
 # accessing the list items, list items are indexed and we can access them by reffering to their index
 print(lst3[0])
-print(f'negative indexing means starting from the last: {lst3[-2]}\n')
+print(f'negative indexing means starting from the last: {lst3[-2]}\n') # Negative indexing
 
 # We can specify the range of indices that we need, the return  value will be a list
 print(f'The range of items from the list {lst3[2:5]}\n') # in the range the second value in not inclusive 

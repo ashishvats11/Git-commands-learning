@@ -35,4 +35,19 @@ print(f'Accessing the set elements using negative range of indexes {thistuple[-3
 if True in thistuple:
     print('Yes it\'s there')
 
+# Unpack a Tuple
+fruits = ('apple','banana','blueberry','strawberry','rasberry')
+(green,yellow,blue,red,magenta) = fruits 
+print("Unpacked the items in the fruits")
+print(green)
+print(yellow)
+print(blue)
+print(red)
+print(magenta)
+(green,*favs, rich) = fruits
+print('In this we have done the unpacking using the asterisk:')
+print(green)
+print(favs) # stores in list
+print(rich)
+
 
