@@ -27,7 +27,6 @@ for i, j  in dict1.items(): # in this way we access keys and values separately a
     print(i,j)
 
 
-
 # Looping a set
 # Sets does not have indexes 
 set1 = {1,2,3,'Apple','Banana','Tiger'}

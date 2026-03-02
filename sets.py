@@ -26,15 +26,18 @@ a4 = set((1,2,3,4)) # passed tuple
 a5 = set(['apple','banana']) # passed list
 a6 = set('String') # passed string
 a7 = set({1,2,3,4,5,2}) # passed set
+
 #converting a dictionary into sets
 d1 = {'first_name':'Ashish','last_name':'Vats','age':23}
+
 a8 = set(d1) # Dictionary passed - in this the set will only have keys
 a9 = set(d1.values()) # This will make a set of dictionary values
 a10 = set(d1.items()) # This will make a set of key_value pairs of dictionary
 print(f'Set a4: {a4} and set a5: {a5} and set a6: {a6} and set a7: {a7}')
 print(f'set a8 from a dictionary (only  keys): {a8}') # In this the set will have the keys of the dictionary
 print(f'set a9 from a dictionary (only values): {a9}') # In this the set will have the values of the dictionary
-print(f'Set a10 from a dictionary (items -  key:value) {a10}')
+print(f'Set a10 from a dictionary (items -  key:value) {a10}') # in this the set will have the key value pair of the dictionary
+
 
 # Access set items
 # access using the for loop
@@ -64,3 +67,10 @@ print(f'Passing string in the update() {set1}')
 
 set1.update({1,2,3}) # passing the set
 print(f'Passing set in the update() {set1}')
+
+# Passing the dictionary in the Sets
+dict1 = {'name':'Apple','age':'thirty six'}
+# set1.update(dict1.values()) # this will add the values in the set
+# set1.update(dict1.items()) # In this the set will have the key value pair of the dictionary - tuples of key value pair
+set1.update(dict1) # this will add the keys in the set
+print(f'Passing dictionary in the update() {set1}')
