@@ -100,3 +100,32 @@ print(f'The clear() {test1}')
 # del keyword - this will delete the set
 # del test1
 # print(f'Test1 set after using the del keyword {test1}') -- It will throw an error because test1 has been deleted
+
+
+## Join Sets ##
+
+s1 = {'a','b','v'}
+s2 = {1,2,3,5,65}
+s3 = {'apple','banana'}
+print(f'Union of sets {s1 | s2}')
+print(f'Union of multiple sets {s1.union(s2,s3)}') # s1|s2|s3
+
+## Intersection of sets
+
+a = {'apple','banana','cherry','melon','blackberry'}
+b = {'apple','microsoft','google','blackberry'}
+c = {'banana','cherry','blackberry'}
+print(f'Intersection of two sets {a & b}')
+print(f'Intersection of multiple sets {a.intersection(b,c)}') # a&b&c 
+
+## Difference of sets - # contain only the items from the first set that are not present in the other set.
+a1 = {1,2,3,4}
+a2 = {2,3,5,6,7}
+print(f'Difference of two sets { a1.difference(a2)}') # a1 - a2 , Multiple sets are also allowed
+
+# Symmetric Difference - method will keep only the elements that are NOT present in both sets.
+
+b1 = {"apple", "banana", "cherry"}
+b2 = {"google", "microsoft", "apple"}
+
+print(f'Symmetric differene of two sets {b1.symmetric_difference(b2)}')
