@@ -74,3 +74,29 @@ dict1 = {'name':'Apple','age':'thirty six'}
 # set1.update(dict1.items()) # In this the set will have the key value pair of the dictionary - tuples of key value pair
 set1.update(dict1) # this will add the keys in the set
 print(f'Passing dictionary in the update() {set1}')
+
+
+# Remove the items of a set -  remove(),  discard(), pop(), clear() and del
+
+test1 = {'apple', 'banana','watermelon', 'Beries', 'Kiwi', 'Pineapple'}
+print(f'The original set test1: {test1}')
+
+# remove() - Pass the value of the item in the set that we want to remove. If that item isn't there in the list it will throw an error
+test1.remove('apple')
+print(f'The test1 set after removing the apple using remove() {test1} ')
+
+# discard() - It works same as remove() but it DOES NOT throw an error if the element that we are removing is not present in the set
+test1.discard(12)
+print(f'We passed an element which is not there in the set but this time we used discard() {test1}') 
+
+#pop() - This method removes any item from the set
+test1.pop()
+print(f'the test1 set after using the pop() {test1}')
+
+# clear() - this function will empty the set
+test1.clear()
+print(f'The clear() {test1}')
+
+# del keyword - this will delete the set
+# del test1
+# print(f'Test1 set after using the del keyword {test1}') -- It will throw an error because test1 has been deleted
