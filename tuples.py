@@ -51,3 +51,11 @@ print(favs) # stores in list
 print(rich)
 
 
+# Join two tuples
+tup1 = ('a','b','c')
+tup2 = (1,2,3)
+print(f'Joining two tuples: {tup1 + tup2}')
+
+#Multipling a tuple
+print(f'Multiply :{tup1 * 3}')
+
