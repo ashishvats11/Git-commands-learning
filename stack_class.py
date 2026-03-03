@@ -24,3 +24,12 @@ class Stack:
     def size(self):
         return len(self.stack)
 
+# If you want to import this class in another file
+# from stack_class import Stack
+
+stack1 = Stack()
+stack1.push(1)
+stack1.push('Apple')
+print(stack1.peek())
+print(stack1.pop())
+print(stack1.size())
