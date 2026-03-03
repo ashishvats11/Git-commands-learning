@@ -4,8 +4,7 @@ class Stack:
     
     def push(self,element):
         self.stack.append(element)
-        return self.stack
-
+        
 
     def pop(self):
         if self.stack:
@@ -28,8 +27,10 @@ class Stack:
 # from stack_class import Stack
 
 stack1 = Stack()
+
 stack1.push(1)
 stack1.push('Apple')
+print(stack1.stack)
 print(stack1.peek())
 print(stack1.pop())
 print(stack1.size())
