@@ -14,7 +14,7 @@ class Queue:
             return "Queue is empty"
         return self.queue.pop(0)
             
-    # Peek
+    # Peek 
     def peek(self):
         if self.isEmpty():
             return "Queue is empty"
