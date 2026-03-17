@@ -46,7 +46,21 @@ class singlyLinkedList:
             self.head = node
         return
 
-    
+    # Delete a node from the linkedlist
+    def delete_LL(self, value):
+        if (self.head!=None):
+            curr = self.head
+            prev = None 
+            while (curr != None and curr.data!=value):
+                prev = curr
+                curr = curr.next
+            prev.next = curr.next
+            # curr.next = None  not necessary
+        else:
+            print("The Linked list is empty")
+        
+
+    # Print the Linked list
     def print_linkedlist (self):
         curr_node = self.head
         while (curr_node.next != None):
@@ -65,6 +79,7 @@ LL_1.insertAtEnd(30)
 LL_1.insertAtEnd(40)
 LL_1.insertAtBegining(100)
 LL_1.insertInBetween(50,20)
+LL_1.delete_LL(40)
 LL_1.print_linkedlist()
 
  
