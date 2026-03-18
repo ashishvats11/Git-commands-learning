@@ -31,3 +31,19 @@ def binarySearch(array, value):
 print(f'This is the array that we are going to use for Binary Search {arr2}')
 
 print(binarySearch(arr2,11))
+
+
+# Recursive method for Binary search
+def recursiveBinarySearch(array,value,l, h ):
+    if l > h :
+        return -1
+    mid = (l + h)//2
+    if array[mid] == value:
+        return mid
+    elif array[mid]> value:
+        return recursiveBinarySearch(array,value,l,mid - 1)
+    else:
+        return recursiveBinarySearch(array, value, mid + 1, h)
+    
+print(f'we are going to use this for Recursive Binary Search {arr2}')
+print(recursiveBinarySearch(arr2,1,0,  len(arr2) - 1))
