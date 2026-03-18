@@ -11,3 +11,23 @@ def linearSearch(array, value):
     return 'Given value is not there in the list'
 
 print(linearSearch(arr,9))
+
+
+# Now we will learn the Binary Search- for this the array  should be sorted
+arr2 = [1,2,3,4,5,6,7,8,9,10]
+
+def binarySearch(array, value):
+    l = 0
+    h = len(array) - 1
+    while(l<=h):
+        mid = (l + h)//2
+        if array[mid] == value:
+            return f'Value {value} is present at {mid} index'
+        elif array[mid] > value:
+            h = mid - 1
+        else:
+            l = mid + 1
+    return -1
+print(f'This is the array that we are going to use for Binary Search {arr2}')
+
+print(binarySearch(arr2,11))
